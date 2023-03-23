@@ -1,0 +1,357 @@
+/*-------------------------------------------IMPORTING POPPINS FONTS-------------------------------------------*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/* ------------------------------------------------CSS RESET-------------------------------------------------- */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*----------------------------------------------UTILITY CLASSES------------------------------------------------*/
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  font-size: 62px;
+  color: white;
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 13px;
+}
+
+p {
+  color: #fff;
+  font-size: 14px;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.container {
+  width: 85vw;
+  margin-inline: auto;
+  padding-inline: 20px;
+}
+
+.flex {
+  display: flex;
+}
+
+.btn4{
+    padding: 8px 10px;
+    background-color: #E9E9ED;
+    border: 1px solid #E9E9ED;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: 0.5s ease-in-out;
+    color: black;
+}
+
+.btn4:hover{
+    background-color: #0D6EFD;
+    color: white;
+    border: #0D6EFD;
+}
+
+.btn4:active{
+    opacity: 0.5;
+}
+
+.fa {
+  cursor: pointer;
+}
+
+/*-----------------------------------------------HEADER----------------------------------------------------------*/
+
+.header {
+    min-height: 50vh;
+    background: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+      url("./eduford_img/background.jpg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+  }
+
+  .header h2{
+    color: white;
+    font-weight: 600;
+    font-size: 30px;
+  }
+  
+  .header nav {
+    justify-content: space-between;
+  }
+  
+  .nav-links {
+    gap: 40px;
+  }
+  
+  .nav-links a::after {
+    content: " ";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #f44336;
+    transition: 0.5s ease-in-out;
+    margin: auto;
+  }
+  
+  .nav-links a:hover::after {
+    width: 100%;
+  }
+  
+  .text-box {
+    width: 60%;
+    text-align: center;
+  }
+  
+  nav .fa {
+    display: none;
+  }
+  
+  nav a img {
+    margin: 40px 30px;
+  }
+  
+  .nav-links {
+    margin: 40px 30px;
+  }
+
+  @media screen and (max-width: 640px) {
+    .text-box h1 {
+      font-size: 28px;
+    }
+  
+    .text-box p br {
+      display: none;
+    }
+  
+    .text-box {
+      width: 100%;
+      padding: 15px;
+    }
+  
+    nav .fa {
+      display: inline-block;
+      color: #fff;
+      font-size: 2rem;
+    }
+  
+    .nav-links {
+      margin: 0;
+    }
+  
+    .fa-bars {
+      margin: 40px 30px;
+    }
+  
+    .nav-links {
+      display: block;
+      position: absolute;
+      right: -50vw;
+      top: 0;
+      height: 50vh;
+      background-color: #f44336;
+      width: 50vw;
+      z-index: 2;
+      padding: 15px;
+      transition: 0.3s ease-in-out;
+    }
+  
+    #navLinks {
+      display: flex;
+      gap: 35px;
+      flex-direction: column;
+    }
+  
+    #navLinks a {
+      font-size: 1rem;
+    }
+  }
+
+  /*-------------------------------------------------MAIN----------------------------------------------------*/
+
+  .main{
+    margin-block: 100px;
+  }
+
+  .categories{
+    gap: 20px;
+  }
+
+  .right{
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .right h3{
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    background-color: #f44336;
+    color: #fff;
+  }
+
+  .cat{
+    width: 50%;
+    text-align: left;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .num {
+    width: 50%;
+    text-align: right;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .cat p{
+    color: black;
+    font-size: 1rem;
+  }
+
+  .num p{
+    color: black;
+    font-size: 1rem;
+  }
+
+  .blog-text-box{
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .blog-text-box p{
+    color: #777777;
+    text-align: justify;
+  }
+
+  @media screen and (max-width:640px) {
+    .categories{
+        flex-direction: column;
+    }
+
+    .left img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .main{
+        margin-block: 50px;
+      }
+
+      .container{
+        width: 99vw;
+        padding: 10px;
+      }
+
+      .cat p{
+        font-size: 15px;
+      }
+
+      .num p{
+        font-size: 15px;
+      }
+  }
+
+  /*---------------------------------------------- COMMENTS---------------------------------------------------- */
+
+  .comment-box{
+    width: 70%;
+    margin: auto;
+    border: 1px solid #777777;
+    padding: 20px 30px;
+  }
+
+  .form{
+    gap: 20px;
+    flex-direction: column;
+  }
+
+  .form button{
+    width: fit-content;
+  }
+
+  #name{
+    padding: 15px;
+    height: 50px;
+    font-size: 1rem;
+    background-color: #7FFFD4;
+    border: none;
+  }
+
+  #email{
+    padding: 15px;
+    height: 50px;
+    font-size: 1rem;
+    background-color: #7FFFD4;
+    border: none;
+  }
+
+  #ur-comment{
+    max-width: 100%;
+    min-width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    background-color: #7FFFD4;
+    border: none;
+  }
+
+  @media screen and (max-width:640px) {
+    .container{
+        width: 99vw;
+        padding: 10px;
+      }
+
+      .comment-box{
+        width: 100%;
+      }
+  }
+
+  /* -------------------------------------------------FOOTER---------------------------------------------------- */
+
+  .sub-foot{
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .fa-brands{
+    margin-inline: 3px;
+  }
+  
+  .fa-brands:hover{
+    color: #0D6EFD;
+    cursor: pointer;
+  }
+  
+  .sub-foot h4{
+    font-weight: 500;
+  }
+  
+  .sub-foot p{
+    color: #777777;
+  }
+
+  .sub-footer{
+    margin-top: 100px;
+  }

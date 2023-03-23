@@ -1,0 +1,481 @@
+/*-------------------------------------------IMPORTING POPPINS FONTS-------------------------------------------*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/* ------------------------------------------------CSS RESET-------------------------------------------------- */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*----------------------------------------------UTILITY CLASSES------------------------------------------------*/
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  font-size: 62px;
+  color: white;
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 13px;
+}
+
+p {
+  color: #fff;
+  font-size: 14px;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.container {
+  width: 85vw;
+  margin-inline: auto;
+  padding-inline: 20px;
+}
+
+.flex {
+  display: flex;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px 34px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  transition: 0.5s ease-in-out;
+  font-size: 13px;
+}
+
+.btn:hover {
+  background-color: #f44336;
+  border: 1px solid #f44336;
+}
+
+.btn:active{
+  opacity: 0.5;
+}
+
+.btn2{
+    padding: 8px 10px;
+    background-color: transparent;
+    border: 1px solid #0D6EFD;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: 0.5s ease-in-out;
+}
+
+.btn2:hover{
+    background-color: #0D6EFD;
+}
+
+.btn2:active{
+  opacity: 0.5;
+}
+
+.fa {
+  cursor: pointer;
+}
+
+/*--------------------------------------------------HEADER-----------------------------------------------------*/
+
+.header {
+  min-height: 100vh;
+  background: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url("./eduford_img/banner.png");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.header nav {
+  justify-content: space-between;
+}
+
+.nav-links {
+  gap: 40px;
+}
+
+.nav-links a::after {
+  content: " ";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #f44336;
+  transition: 0.5s ease-in-out;
+  margin: auto;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.text-box {
+  width: 60%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.text-box p {
+  margin-block-start: 2rem;
+  margin-block-end: 2.7rem;
+}
+
+nav .fa {
+  display: none;
+}
+
+nav a img {
+  margin: 40px 30px;
+}
+
+.nav-links {
+  margin: 40px 30px;
+}
+
+/*-----------------------------------------------MEDIA QUERIES SM-------------------------------------------------*/
+/*------------------------------Sm->640px-----md->768px-----lg->1024px-----xl->1280px-----------------------------*/
+
+@media screen and (max-width: 640px) {
+  .text-box h1 {
+    font-size: 28px;
+  }
+
+  .text-box p br {
+    display: none;
+  }
+
+  .text-box {
+    width: 100%;
+    padding: 15px;
+  }
+
+  nav .fa {
+    display: inline-block;
+    color: #fff;
+    font-size: 2rem;
+  }
+
+  .nav-links {
+    margin: 0;
+  }
+
+  .fa-bars {
+    margin: 40px 30px;
+  }
+
+  .nav-links {
+    display: block;
+    position: absolute;
+    right: -50vw;
+    top: 0;
+    height: 100vh;
+    background-color: #f44336;
+    width: 50vw;
+    z-index: 2;
+    padding: 15px;
+    transition: 0.3s ease-in-out;
+  }
+
+  #navLinks {
+    display: flex;
+    gap: 35px;
+    flex-direction: column;
+  }
+
+  #navLinks a {
+    font-size: 1rem;
+  }
+}
+
+/*-------------------------------------------------------COURSES-------------------------------------------------*/
+
+.main p {
+  color: #333;
+}
+
+.main-head p {
+  color: #777777;
+}
+
+.main-head {
+  text-align: center;
+}
+
+.main-cards {
+  justify-content: center;
+  gap: 20px;
+}
+
+.programs {
+  width: 32%;
+  border: 1px solid #d2c8c8;
+  border-radius: 8px;
+  padding: 40px 35px;
+  text-align: justify;
+  background-color: rgb(255, 243, 243);
+  transition: 0.3s ease-in-out;
+}
+
+.programs:hover {
+  box-shadow: 0 0 10px #777;
+}
+
+.programs p {
+  color: #777777;
+}
+
+.programs h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.main-head {
+  margin-block: 60px;
+}
+
+/*----------------------------------------------MEDIA QURIES-------------------------------------------------*/
+
+@media screen and (max-width: 640px) {
+  .main-head h2 {
+    font-size: 30px;
+  }
+
+  .main-cards {
+    flex-direction: column;
+  }
+
+  .programs {
+    width: 100%;
+  }
+
+  .container {
+    width: 100vw;
+  }
+}
+
+/*--------------------------------------------------CAMPUS---------------------------------------------------*/
+
+.campus {
+  width: 32%;
+  position: relative;
+  text-align: center;
+}
+
+.campus img {
+  width: 100%;
+  border-radius: 25px;
+  height: 100%;
+}
+
+.layer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  transition: 0.5s ease-in-out;
+}
+
+.layer h3 {
+  font-size: 35px;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-49%);
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+}
+
+.layer:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.layer:hover h3 {
+  opacity: 1;
+  bottom: 49%;
+}
+
+/*----------------------------------------------MEDIA QURIES-------------------------------------------------*/
+
+@media screen and (max-width: 640px) {
+  .campus {
+    width: 100%;
+  }
+}
+
+/*-----------------------------------------------FACILITES-----------------------------------------------------*/
+
+.facilites {
+    width: 32%;
+    position: relative;
+}
+  
+.facilites img {
+    width: 100%;
+    border-radius: 25px;
+}
+
+.facilites h3{
+    font-weight: 500;
+    margin-block: 10px;
+}
+
+.facilites p{
+    text-align: justify;
+    color: #777777;
+}
+
+/*----------------------------------------------MEDIA QURIES-------------------------------------------------*/
+
+@media screen and (max-width:640px) {
+    .facilites{
+        width: 100%;
+    }
+}
+
+/* -----------------------------------------------REVIEWS--------------------------------------------------- */
+
+.review{
+    width: 49.2%;
+    background-color: rgb(255, 243, 243);
+    padding: 20px 30px;
+    border-radius: 10px;
+}
+
+.reviews{
+    justify-content: space-between;
+}
+
+.profile img{
+    border-radius: 50%;
+    margin-right: 50px;
+}
+
+.profile-review{
+    flex-direction: column;
+    gap: 10px;
+    text-align: justify;
+}
+
+.profile-review h3{
+    font-weight: 500;
+}
+
+.fa-star{
+  color: #f44336;
+}
+
+/*------------------------------------------------MEDIA QUERIES-------------------------------------------------*/
+
+@media screen and (max-width:640px) {
+    .reviews{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .review{
+        width: 100%;
+    }
+}
+
+/*----------------------------------------------------FOOTER----------------------------------------------------*/
+
+.footer {
+    margin-block: 4rem;
+}
+
+.foot{
+  position: relative;
+}
+
+.foot img{
+  width: 100%;
+  height: 100%;
+}
+
+.layer2{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background:linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7));
+  top: 0;
+  bottom: 0;
+}
+
+.enroll{
+    height: 100%;
+    width: 100%;
+    color: white;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    position: absolute;
+    top: 0;
+}
+
+.enroll a{
+    width: fit-content;
+}
+
+/*--------------------------------------------MEDIA QUERIES----------------------------------------------------*/
+
+@media screen and (max-width:640px) {
+    .enroll h2{
+        font-size: 20px;
+        margin-inline: 9px;
+    }
+
+    .enroll{
+      gap: 15px;
+        border-radius: 1rem;
+    }
+}
+
+/*----------------------------------------------SUB-FOOTER -------------------------------------------------------*/
+
+.sub-foot{
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.fa-brands{
+  margin-inline: 3px;
+}
+
+.fa-brands:hover{
+  color: #0D6EFD;
+  cursor: pointer;
+}
+
+.sub-foot h4{
+  font-weight: 500;
+}
+
+.sub-foot p{
+  color: #777777;
+}
